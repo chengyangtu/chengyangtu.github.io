@@ -227,3 +227,36 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+function copyEmail_1(element) {
+  navigator.clipboard.writeText('bravetcy@gmail.com')
+    .then(() => {
+      // 更改按鈕文字顯示已複製
+      element.innerHTML = '<i class="bi bi-check-circle"></i> 已複製！';
+
+      // 3秒後恢復原來的文字
+      setTimeout(function() {
+        element.innerHTML = '<i class="bi bi-envelope"></i>';
+      }, 3000);
+    })
+    .catch(err => {
+      console.error('複製錯誤:', err);
+    });
+}
+
+function copyEmail_2() {
+  navigator.clipboard.writeText('bravetcy@gmail.com')
+    .then(() => {
+      // 顯示提示訊息
+      var message = document.getElementById('copyMessage');
+      message.style.display = 'block';
+
+      // 3秒後隱藏提示訊息
+      setTimeout(function() {
+        message.style.display = 'none';
+      }, 3000);
+    })
+    .catch(err => {
+      console.error('複製錯誤:', err);
+    });
+}
