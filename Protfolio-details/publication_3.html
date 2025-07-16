@@ -73,17 +73,9 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Improving the Performance of Mixture-of-Expert by Feeding More Data to Hungry Expert</h1>
+          <h1 class="title is-1 publication-title">稿件自動化審稿工具</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              Research Advisor: Peng Li</br>
-              Student: <a href="/index.html">Cheng-Yang Tu</a>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">The University of Aizu, Fukushima, Japan</span>
-            <br>
-            <i>September 2024</i>
+            <i>2025 5月</i>
           </div>
         </div>
       </div>
@@ -97,578 +89,88 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">專案簡介</h2>
         <div class="content has-text-justified">
           <p>
-            In recent years, an increasing number of studies have used Large Language Models
-            (LLMs) in the field of Natural Language Processing (NLP), which use large amounts
-            of data and computing resources to allow the model to understand and think about human
-            language. Many applications have already been in our lives, such as Chat-GPT,
-            ClaudeAI, and MetaAI. Although LLMs achieves excellent performance in many tasks,
-            it requires a large amount of space and performance for data storage and calculation,
-            which has become a problem that LLMs must face. To address these challenges, the
-            Mixture-of-Experts (MoE) model introduces a new chapter to LLMs, which can significantly
-            improve performance and efficiency through dynamic routing and sparsity
-            features. However, the MoE model is prone to overfitting, owing to its sparse characteristics.
+            協助一間活動公關公司開發文學獎稿件自動審稿工具，成功取代原先仰賴人工作業與第三方檢測平台的流程。透過 Python 建置 GUI 介面（Tkinter），並整合 Selenium 自動化操作，實現一鍵批次上傳與審核，大幅提升審稿效率。
           </p>
           <p>
-            In many past studies, the Dropout mechanism has been used to alleviate the problem
-            of overfitting, but the accuracy of the model will be lost because experts are randomly
-            discarded. To solve this problem, this study proposes a new dynamic allocation mechanism,
-            G-Router, that adjusts the token allocation probability through the gradient value
-            to solve the accuracy loss problem caused by Dropout. Experimental results show that
-            G-Router outperforms traditional Dropout in various tasks, improving the overall MoE
-            model, promising for future development. The superior performance of G-Router over
-            Dropout highlights its potential as a valuable tool for enhancing the performance of
-            MoE models, paving the way for further research and advancement in this field.
+          ✅ 作業時間縮短約 80%
+          <br>
+          ✅ 成本降低超過 60%
+          <br>
+          ✅ 減輕團隊審稿負擔
+          <br>
+          ✅ 建立公司內部可複製的自動化流程架構
+          </p>
+          <p>
+            這套工具讓非技術人員也能輕鬆上手，並支援後續活動的快速部署，成功將繁瑣的流程轉化為穩定高效的操作介面。
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- English Translation -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="color: #666; margin-top: 2rem;">Project Overview</h2>
+        <div class="content has-text-justified" style="color: #666;">
+          <p>
+            Assisted an event PR company in developing an automated manuscript review tool for literary awards, successfully replacing the previous manual process and third-party detection platforms. Built a GUI interface using Python (Tkinter) and integrated Selenium automation to achieve one-click batch upload and review, significantly improving review efficiency.
+          </p>
+          <p>
+          ✅ Process Efficiency +80%
+          <br>
+          ✅ Cost Down > 60%
+          <br>
+          ✅ Labor Load Reduction
+          <br>
+          ✅ Workflow Standardization & Automation
+          </p>
+          <p>
+            This tool enables non-technical personnel to easily get started and supports rapid deployment for subsequent events, successfully transforming complex processes into a stable and efficient operational interface.
           </p>
           <!-- <p><span class="dnerf">Nerfies</span><i>"nerfies"</i>.</p> -->
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-  </div>
-</section>
 
-
-<!-- Backgroiund -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- MoE -->
+    <!-- Image Gallery -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">G-Router</h2>
-        <div class="content has-text-justified">
-          <div class="container is-centered has-text-centered" style="width: 80%">
-            <img src="./static/images/Aizu_Thesis/System_archicture.png"
-                 class="interpolation-image"
-                 alt="Basic MoE architecture diagram"/>
-                 <p>Figure 1: System architecture of G-Router</p>
+        <h2 class="title is-3" style="margin-top: 2rem;">專案展示</h2>
+        <h3 class="title is-4" style="color: #666; margin-top: 0.5rem;">Project Showcase</h3>
+        <div class="columns is-multiline is-centered" style="margin-top: 1rem;">
+          <div class="column is-half-tablet is-half-desktop">
+            <figure class="image">
+              <img src="./static/images/Publication_3/publication_3_02.png" alt="專案展示圖片 1" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </figure>
           </div>
-          <br>
-          <p>
-            We illustrate the G-Router in Figure 1.
-            G-Router is a new router mechanism that recalculates each expert’s token dispatch
-            probability. This mechanism optimizes the distribution of tasks, ensuring that each expert
-            receives an appropriate number of tokens based on their calculated probability. By
-            dynamically adjusting these probabilities, the G-Router enhances the overall accuracy
-            of the model and alleviates the problem of overfitting. This chapter will explain the specific
-            formula used for these calculations. Our goal is to demonstrate how the G-Router
-            improves performance and facilitates better resource allocation within the system.
-          </p>
-
-          <p>
-            We denote the gradient of expert \( i \) as \( gi \). We normalize each expert gradient value by
-            <strong>Algorithm 1 </strong>The new probability \( pi \) is calculated based on the expert’s gradient. The
-            calculations are as follows:
-
-            \[ p_i = \frac{1}{1 + g_i} \]
-          </p>
-          <br>
-          <p>
-            <div style="border: 1px solid #999; padding: 1rem; margin: 1rem 0; font-family: 'Courier New', monospace;">
-              <strong>Algorithm 1</strong> Softmax Function<br><br>
-            
-              <strong>Require:</strong> Input vector \( z = [z_1, z_2, \ldots, z_K] \)<br>
-              <strong>Ensure:</strong> Output vector \( y = [y_1, y_2, \ldots, y_K] \)<br><br>
-            
-              1:&nbsp;&nbsp;for \( i = 1 \) to \( K \) do<br>
-              2:&nbsp;&nbsp;&nbsp;&nbsp;Compute \( y_i = \frac{\exp(z_i)}{\sum_{j=1}^{K} \exp(z_j)} \)<br>
-              3:&nbsp;&nbsp;end for<br>
-              4:&nbsp;&nbsp;return \( y \)
-            </div>
-          </p>
-          <br>
-          <p>
-            Figure 2 shows the method flowchart of the G-Router mechanism.
-            During the training phase, the gradient value of each expert is recorded first. Then, forward propagation
-            is performed to compute the gated network. The gated network operates on the
-            input value and produces a tensor matrix with dimensions corresponding to the number
-            of tokens and experts. Each token has a value associated with a different expert. The
-            recorded gradient values are then input into Algorithm 1 for normalization processing to
-            calculate the new distribution probability. The router score is recalculated, and finally,
-            gating is performed to obtain the gate value.
-          </p>
-
-          <div class="container is-centered has-text-centered">
-            <img src="./static/images/Aizu_Thesis/G-Router_flowchart.png"
-                 class="interpolation-image"
-                 alt="Basic MoE architecture diagram"
-                 style="width: 30%"/>
-                 <p>Figure 2: The flowchart of G-Router mechanism.</p>
+          <div class="column is-half-tablet is-half-desktop">
+            <figure class="image">
+              <img src="./static/images/Publication_3/publication_3_01.png" alt="專案展示圖片 2" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </figure>
           </div>
-
-
+          <div class="column is-half-tablet is-half-desktop">
+            <figure class="image">
+              <img src="./static/images/Publication_3/publication_3_03.png" alt="專案展示圖片 3" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </figure>
+          </div>
+          <div class="column is-half-tablet is-half-desktop">
+            <figure class="image">
+              <img src="./static/images/Publication_3/publication_3_05.png" alt="專案展示圖片 3" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </figure>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Background. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Experiment Setup. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Experiments Setup</h2>
-        <div class="content has-text-justified">
-          <p>
-            We use Stanford Question Answering Dataset(SQuAD) and some of General Language Understanding Evaluation(GLUE) 
-            data in our experiment.
-
-            Our experimental architecture uses the FastMoE framework to convert the
-            BERT model into a Mixture-of-Experts (MoE) model and conduct experimental comparisons
-            between Dropout and G-Router on Tiny BERT, Small BERT, and Medium
-            BERT. It verifies our proposed method’s effect on different scales of BERT models.
-        </div>
-      </div>
-    </div>
-    <!--/ Experiment Setup. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Overall Performance. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Overall Performance</h2>
-        <div class="content has-text-justified">
-          <p>
-            To ensure the reliability of our results, we averaged each experimental data point
-            across multiple trials, instead of relying on specific instances of peak performance.
-          </p>
-          
-          <!-- SQuAD Dataset -->
-          <section class="section">
-            <div class="container is-max-desktop is-centered has-text-centered">
-              <p>(a) Performance on SQuAD Dataset</p>
-              <div class="table-container">
-                <table class="table is-bordered is-striped is-hoverable is-fullwidth"
-                title="Performance on SQuAD Dataset">
-                  <thead>
-                    <tr>
-                      <td></td>
-                      <td colspan="2">TinyBERT</td>
-                      <td colspan="2">SmallBERT</td>
-                      <td colspan="2">MediumBERT</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>Dropout</td>
-                      <td>G-Router</td>
-                      <td>Dropout</td>
-                      <td>G-Router</td>
-                      <td>Dropout</td>
-                      <td>G-Router</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0</td>
-                      <td>38.32</td>
-                      <td><strong>40.91</strong></td>
-                      <td>70.67</td>
-                      <td><strong>71.15</strong></td>
-                      <td>73.51</td>
-                      <td><strong>74.04</strong></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>38.18</td>
-                      <td><strong>40.79</strong></td>
-                      <td>70.88</td>
-                      <td><strong>70.98</strong></td>
-                      <td>73.77</td>
-                      <td><strong>73.99</strong></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>38.22</td>
-                      <td><strong>41.03</strong></td>
-                      <td>70.65</td>
-                      <td><strong>71.04</strong></td>
-                      <td>72.89</td>
-                      <td><strong>74.56</strong></td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>37.98</td>
-                      <td><strong>40.78</strong></td>
-                      <td>70.08</td>
-                      <td><strong>71.24</strong></td>
-                      <td>73.62</td>
-                      <td><strong>74.23</strong></td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>38.16</td>
-                      <td><strong>40.73</strong></td>
-                      <td>70.73</td>
-                      <td><strong>70.99</strong></td>
-                      <td>73.58</td>
-                      <td><strong>74.18</strong></td>
-                    </tr>
-                    <tr>
-                      <td>Accuracy</td>
-                      <td>38.17</td>
-                      <td><strong>40.85</strong></td>
-                      <td>70.60</td>
-                      <td><strong>71.08</strong></td>
-                      <td>73.47</td>
-                      <td><strong>74.20</strong></td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <p>(b) Performance on CoLA Dataset</p>
-                <div class="table-container">
-                  <table class="table is-bordered is-striped is-hoverable is-fullwidth" title="Performance on CoLA Dataset">
-                    <thead>
-                      <tr>
-                        <td></td>
-                        <td colspan="2">TinyBERT</td>
-                        <td colspan="2">SmallBERT</td>
-                        <td colspan="2">MediumBERT</td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td>Dropout</td>
-                        <td>G-Router</td>
-                        <td>Dropout</td>
-                        <td>G-Router</td>
-                        <td>Dropout</td>
-                        <td>G-Router</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>0</td>
-                        <td><strong>69.15</strong></td>
-                        <td>69.06</td>
-                        <td><strong>74.11</strong></td>
-                        <td>73.83</td>
-                        <td>70.95</td>
-                        <td><strong>73.15</strong></td>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td><strong>69.60</strong></td>
-                        <td>69.41</td>
-                        <td>74.20</td>
-                        <td><strong>74.40</strong></td>
-                        <td>72.48</td>
-                        <td><strong>73.15</strong></td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>69.22</td>
-                        <td><strong>69.51</strong></td>
-                        <td>73.83</td>
-                        <td><strong>74.68</strong></td>
-                        <td>72.77</td>
-                        <td><strong>73.34</strong></td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td><strong>69.51</strong></td>
-                        <td>69.42</td>
-                        <td>73.98</td>
-                        <td><strong>74.57</strong></td>
-                        <td>73.04</td>
-                        <td><strong>73.22</strong></td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>69.36</td>
-                        <td><strong>69.60</strong></td>
-                        <td>74.02</td>
-                        <td><strong>74.72</strong></td>
-                        <td>72.50</td>
-                        <td><strong>73.27</strong></td>
-                      </tr>
-                      <tr>
-                        <td>Accuracy</td>
-                        <td>69.37</td>
-                        <td><strong>69.40</strong></td>
-                        <td>74.02</td>
-                        <td><strong>74.44</strong></td>
-                        <td>72.20</td>
-                        <td><strong>73.23</strong></td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <p>(c) Performance on SST-2 Dataset</p>
-                  <div class="table-container">
-                    <table class="table is-bordered is-striped is-hoverable is-fullwidth" title="Performance on SST-2 Dataset">
-                      <thead>
-                        <tr>
-                          <td></td>
-                          <td colspan="2">TinyBERT</td>
-                          <td colspan="2">SmallBERT</td>
-                          <td colspan="2">MediumBERT</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>Dropout</td>
-                          <td>G-Router</td>
-                          <td>Dropout</td>
-                          <td>G-Router</td>
-                          <td>Dropout</td>
-                          <td>G-Router</td>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>0</td>
-                          <td>81.88</td>
-                          <td>81.88</td>
-                          <td><strong>87.95</strong></td>
-                          <td>87.84</td>
-                          <td><strong>90.59</strong></td>
-                          <td>89.56</td>
-                        </tr>
-                        <tr>
-                          <td>1</td>
-                          <td>82.22</td>
-                          <td><strong>82.56</strong></td>
-                          <td>88.18</td>
-                          <td><strong>88.42</strong></td>
-                          <td>89.79</td>
-                          <td><strong>90.37</strong></td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td><strong>82.30</strong></td>
-                          <td>82.11</td>
-                          <td>87.84</td>
-                          <td><strong>88.65</strong></td>
-                          <td>89.45</td>
-                          <td><strong>89.67</strong></td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>81.96</td>
-                          <td><strong>82.68</strong></td>
-                          <td>87.95</td>
-                          <td><strong>89.11</strong></td>
-                          <td>89.67</td>
-                          <td><strong>90.13</strong></td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td>82.15</td>
-                          <td><strong>82.34</strong></td>
-                          <td><strong>88.64</strong></td>
-                          <td>87.73</td>
-                          <td>89.63</td>
-                          <td><strong>89.94</strong></td>
-                        </tr>
-                        <tr>
-                          <td>Accuracy</td>
-                          <td>82.10</td>
-                          <td><strong>82.31</strong></td>
-                          <td>88.12</td>
-                          <td><strong>88.35</strong></td>
-                          <td>89.81</td>
-                          <td><strong>89.93</strong></td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-
-                    <p>(d) Performance on MRPC Dataset</p>
-                    <div class="table-container">
-                      <table class="table is-bordered is-striped is-hoverable is-fullwidth" title="Performance on MRPC Dataset">
-                        <thead>
-                          <tr>
-                            <td></td>
-                            <td colspan="2">TinyBERT</td>
-                            <td colspan="2">SmallBERT</td>
-                            <td colspan="2">MediumBERT</td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td>Dropout</td>
-                            <td>G-Router</td>
-                            <td>Dropout</td>
-                            <td>G-Router</td>
-                            <td>Dropout</td>
-                            <td>G-Router</td>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>0</td>
-                            <td><strong>78.89</strong></td>
-                            <td>78.66</td>
-                            <td>86.05</td>
-                            <td><strong>86.16</strong></td>
-                            <td>85.70</td>
-                            <td><strong>85.83</strong></td>
-                          </tr>
-                          <tr>
-                            <td>1</td>
-                            <td>78.29</td>
-                            <td><strong>78.86</strong></td>
-                            <td>85.84</td>
-                            <td><strong>86.48</strong></td>
-                            <td>86.02</td>
-                            <td><strong>86.42</strong></td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>78.24</td>
-                            <td><strong>79.12</strong></td>
-                            <td>86.12</td>
-                            <td><strong>86.32</strong></td>
-                            <td>85.83</td>
-                            <td><strong>86.40</strong></td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>78.43</td>
-                            <td><strong>78.93</strong></td>
-                            <td>86.39</td>
-                            <td><strong>86.44</strong></td>
-                            <td>85.79</td>
-                            <td><strong>86.18</strong></td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>78.36</td>
-                            <td><strong>78.94</strong></td>
-                            <td>86.18</td>
-                            <td><strong>86.37</strong></td>
-                            <td>85.72</td>
-                            <td><strong>86.26</strong></td>
-                          </tr>
-                          <tr>
-                            <td>Accuracy</td>
-                            <td>78.44</td>
-                            <td><strong>78.90</strong></td>
-                            <td>86.12</td>
-                            <td><strong>86.35</strong></td>
-                            <td>85.81</td>
-                            <td><strong>86.22</strong></td>
-                          </tr>
-                        </tbody>
-                      </table>
-
-              </div>
-            </div>
-          </section>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Overall Performance. -->
+    <!--/ Image Gallery -->
   </div>
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Convergence Analysis. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Convergence Analysis</h2>
-        <div class="content has-text-justified">
-          <p>
-            Figure 3 presents our experimental results on the SQuAD dataset, showcasing
-            the accuracy and loss values over the training period. The red curve corresponds to
-            the experiment using G-Router, while the blue curve represents the experiment using
-            Dropout.
-          </p>
-          <p>
-            These results collectively confirm the effectiveness of the dynamic allocation probability
-            method we designed for model training. The G-Router not only improves model
-            accuracy but also accelerates the convergence speed,  providing a robust alternative to traditional Dropout techniques.
-          </p>
-        </div>
-
-        <div class="columns is-multiline is-centered">
-          <!-- 第一行 -->
-          <div class="column is-half has-text-centered">
-            <figure>
-              <img src="./static/images/Aizu_Thesis/Tiny_Accuracy_Curve.png" alt="Accuracy curve of TinyBERT">
-              <figcaption>(a) Accuracy curve of TinyBERT</figcaption>
-            </figure>
-          </div>
-          <div class="column is-half has-text-centered">
-            <figure>
-              <img src="./static/images/Aizu_Thesis/Tiny_Loss_Curve.png" alt="Loss curve of TinyBERT">
-              <figcaption>(b) Loss curve of TinyBERT</figcaption>
-            </figure>
-          </div>
-          <!-- 第二行 -->
-          <div class="column is-half has-text-centered">
-            <figure>
-              <img src="./static/images/Aizu_Thesis/Small_Accuracy_Curve.png" alt="Accuracy curve of SmallBERT">
-              <figcaption>(c) Accuracy curve of SmallBERT</figcaption>
-            </figure>
-          </div>
-          <div class="column is-half has-text-centered">
-            <figure>
-              <img src="./static/images/Aizu_Thesis/Small_Loss_Curve.png" alt="Loss curve of SmallBERT">
-              <figcaption>(d) Loss curve of SmallBERT</figcaption>
-            </figure>
-          </div>
-          <!-- 第三行 -->
-          <div class="column is-half has-text-centered">
-            <figure>
-              <img src="./static/images/Aizu_Thesis/Medium_Accuracy_Curve.png" alt="Accuracy curve of MediumBERT">
-              <figcaption>(e) Accuracy curve of MediumBERT</figcaption>
-            </figure>
-          </div>
-          <div class="column is-half has-text-centered">
-            <figure>
-              <img src="./static/images/Aizu_Thesis/Medium_Loss_Curve.png" alt="Loss curve of MediumBERT">
-              <figcaption>(f) Loss curve of MediumBERT</figcaption>
-            </figure>
-          </div>
-        </div>
-        <p class="has-text-centered">
-          <strong>Figure 3:</strong> The figure shows the accuracy and loss value comparison between the experimental results of G-Router and Dropout on the SQuAD dataset.
-        </p>
-
-      </div>
-    </div>
-    <!--/ Convergence Analysis. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Conclusion. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Conclusion</h2>
-        <div class="content has-text-justified">
-          <p>
-            In our work, we point out the critical issue by using Dropout technology.
-            We propose G-Router, a gradient-informed token allocation 
-            mechanism designed to overcome the limitations of conventional Dropout 
-            in Mixture of Experts (MoE) models. 
-            By dynamically adjusting 
-            the routing probabilities based on expert-specific gradient magnitudes, 
-            our method effectively mitigates the stochastic nature of Dropout, leading 
-            to improved token assignment and enhanced utilization of expert networks. 
-            Empirical evaluations on benchmark datasets demonstrate that G-Router 
-            significantly improves convergence speed and model accuracy, while also 
-            reducing computational overhead. These findings underscore the potential 
-            of G-Router as a scalable and efficient solution for optimizing expert 
-            selection, thereby contributing to the advancement of overfitting mitigation 
-            techniques in deep learning.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Conclusion. -->
-  </div>
-</section>
 
 
 <!-- <section class="section" id="BibTeX">
